@@ -26,9 +26,13 @@ f.close()
 
 # Scrabble rack
 
+scrabbleRack = sys.argv[1] 
 
 # In case user forgets to supply a Scrabble rack 
 
+if len(sys.argv) < 2:
+    print("Please provide at least two letters from your Scrabble rack")
+    exit(1)
 
 # Find all words from the word file that are made of letters from the Scrabble rack
 
