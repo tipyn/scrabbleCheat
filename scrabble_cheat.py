@@ -26,8 +26,7 @@ f.close()
 
 # Scrabble rack
 
-
-
+test line
 
 # In case user forgets to supply a Scrabble rack 
 
