@@ -1,0 +1,24 @@
+Errors:
+
+➜  scrabbleCheat git:(master) ✗ python scrabble_cheat.py ABCDEF
+  File "scrabble_cheat.py", line 53
+    if letter not in letters
+                           ^
+SyntaxError: invalid syntax
+➜  scrabbleCheat git:(master) ✗ python scrabble_cheat.py ABCDEF
+  File "scrabble_cheat.py", line 58
+    if candidate == True
+                       ^
+SyntaxError: invalid syntax
+➜  scrabbleCheat git:(master) ✗ python scrabble_cheat.py ABCDEF
+  File "scrabble_cheat.py", line 60
+    total = 0
+        ^
+IndentationError: expected an indented block
+➜  scrabbleCheat git:(master) ✗ python scrabble_cheat.py ABCDEF
+Traceback (most recent call last):
+  File "scrabble_cheat.py", line 31, in <module>
+    for line in f: 
+IOError: File not open for reading
+➜  scrabbleCheat git:(master) ✗ python scrabble_cheat.py ABCDEF
+➜  scrabbleCheat git:(master) ✗ 

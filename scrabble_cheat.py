@@ -1,4 +1,4 @@
-# Import any modules needed
+# Import sys module so we can run the script from the CLI
 
 import sys
 
@@ -23,6 +23,14 @@ for line in f:
 
 f.close()
 
+# Using a with statement instead
+
+#words = []
+
+#with open('sowpods.txt', 'w') as f:
+#	for line in f: 
+#		words.append(line.strip())
+
 
 # Scrabble rack
 
@@ -36,5 +44,29 @@ if len(sys.argv) < 2:
 
 # Find all words from the word file that are made of letters from the Scrabble rack
 
+rack_words = []
 
-# Score the words that the above code finds
+for word in words:
+	candidate = True
+	letters = list(scrabbleRack)
+	for letter in word:
+		if letter not in letters:
+			candidate = False 
+			break
+		else: 
+			letters.remove(letter)
+		if candidate == True:
+		# Score the words that the above code finds
+			total = 0
+		for letter in word:
+			total = total + scores[letter]
+		rack_words.append([total, word])
+
+# Print the words found and sort by score
+
+rack_words.sort()
+
+for entry in rack_words:
+		score = entry[0]
+		word = entry[1]
+		print(str(score) + " " + word)
