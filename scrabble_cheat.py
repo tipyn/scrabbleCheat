@@ -18,10 +18,12 @@ f = open("sowpods.txt", "r")
 words = []
 
 for line in f:
-    line = line.strip()
-    words.append(line)
+	line = line.strip()
+	words.append(line)
 
 f.close()
+
+print("is this working? line 26")
 
 # Using a with statement instead
 
@@ -36,11 +38,15 @@ f.close()
 
 scrabbleRack = sys.argv[1] 
 
+print("is this working? line 41")
+
 # In case user forgets to supply a Scrabble rack 
 
 if len(sys.argv) < 2:
     print("Please provide at least two letters from your Scrabble rack")
     exit(1)
+
+print("is this working? line 49")
 
 # Find all words from the word file that are made of letters from the Scrabble rack
 
@@ -62,11 +68,15 @@ for word in words:
 			total = total + scores[letter]
 		rack_words.append([total, word])
 
+		print("is this working? line 71")
+
 # Print the words found and sort by score
 
 rack_words.sort()
 
 for entry in rack_words:
-		score = entry[0]
-		word = entry[1]
-		print(str(score) + " " + word)
+	score = entry[0]
+	word = entry[1]
+	print(str(score) + " " + word)
+
+	print("is this working? line 82")

@@ -22,3 +22,7 @@ Traceback (most recent call last):
 IOError: File not open for reading
 ➜  scrabbleCheat git:(master) ✗ python scrabble_cheat.py ABCDEF
 ➜  scrabbleCheat git:(master) ✗ 
+
+
+
+Script doesn't seem to be printing when I test it
