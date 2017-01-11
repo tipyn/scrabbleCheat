@@ -31,6 +31,7 @@ words = []
 
 with open('sowpods.txt', 'r') as f:
 	for line in f: 
+		print("is this working? line 34")
 		words.append(line.strip())
 
 # Scrabble rack
