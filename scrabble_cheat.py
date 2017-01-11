@@ -31,14 +31,11 @@ words = []
 
 with open('sowpods.txt', 'r') as f:
 	for line in f: 
-		print("is this working? line 34")
 		words.append(line.strip())
 
 # Scrabble rack
 
 scrabbleRack = sys.argv[1] 
-
-print("is this working? line 41")
 
 # In case user forgets to supply a Scrabble rack 
 
@@ -46,14 +43,11 @@ if len(scrabbleRack) < 2:
 	print("Please provide at least two letters from your Scrabble rack")
 	exit(1)
 
-print(words)
-print("is this working? line 49")
 # Find all words from the word file that are made of letters from the Scrabble rack
 
 rack_words = []
-print("is this working? line 53")
+
 for word in words:
-	print("is this working? line 58")
 	candidate = True
 	letters = list(scrabbleRack)
 	for letter in word:
