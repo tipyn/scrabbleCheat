@@ -13,26 +13,25 @@ scores = {"a": 1, "c": 3, "b": 3, "e": 1, "d": 2, "g": 2,
 
 # Open sowpods.txt words file, make a list and get rid of line break
 
-f = open("sowpods.txt", "r")
-
-words = []
-
-for line in f:
-	line = line.strip()
-	words.append(line)
-
-f.close()
-
-print("is this working? line 26")
-
-# Using a with statement instead
+#f = open("sowpods.txt", "r")
 
 #words = []
 
-#with open('sowpods.txt', 'w') as f:
-#	for line in f: 
-#		words.append(line.strip())
+#for line in f:
+#	line = line.strip()
+#	words.append(line)
 
+#f.close()
+
+#print("is this working? line 26")
+
+# Using a with statement instead
+
+words = []
+
+with open('sowpods.txt', 'r') as f:
+	for line in f: 
+		words.append(line.strip())
 
 # Scrabble rack
 
@@ -43,16 +42,17 @@ print("is this working? line 41")
 # In case user forgets to supply a Scrabble rack 
 
 if len(sys.argv) < 2:
-    print("Please provide at least two letters from your Scrabble rack")
-    exit(1)
+	print("Please provide at least two letters from your Scrabble rack")
+	exit(1)
 
-print("is this working? line 49")
+print(words)
 
 # Find all words from the word file that are made of letters from the Scrabble rack
 
 rack_words = []
 
 for word in words:
+	print("is this working? line 58")
 	candidate = True
 	letters = list(scrabbleRack)
 	for letter in word:
