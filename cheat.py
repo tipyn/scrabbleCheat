@@ -49,8 +49,8 @@ for word in wordlist:
             total = total + scores[letter]
         valid_words.append([total, word])
         print "test10"
-# Print the valid words, sorted by Scrabble score.
 
+# Print the valid words, sorted by Scrabble score.
 valid_words.sort()
 print "test11"
 for entry in valid_words:
